@@ -71,12 +71,13 @@ class CurryLexer(RegexLexer):
             (r'\d+\.\d+([eE][+-]?\d+)?', Number.Float),
             (r'0[oO][0-7]+', Number.Oct),
             (r'0[xX][\da-fA-F]+', Number.Hex),
+            (r'0[bB][01]+', Number.Bin),
             (r'\d+', Number.Integer),
             #  Character/String Literals
             (r"'", String.Char, 'character'),
             (r'"', String, 'string'),
             #  Special
-            (r'\[\]', Keyword.Type),
+            #(r'\[\]', Keyword.Type),
             (r'\(\)', Name.Builtin),
             (r'[][(),;`{}]', Punctuation),
         ],

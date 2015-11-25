@@ -109,6 +109,7 @@ class MastersthesisStyle(Style):
         Number.Integer:            "bold #8f5902",   # class: 'mi'
         Number.Integer.Long:       "bold #8f5902",   # class: 'il'
         Number.Oct:                "bold #8f5902",   # class: 'mo'
+        Number.Bin:                "bold #8f5902",   # class: 'mo'
 
         Literal:                   "#000000",        # class: 'l'
         Literal.Date:              "#000000",        # class: 'ld'
