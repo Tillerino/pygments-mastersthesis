@@ -32,7 +32,7 @@ class CurryLexer(RegexLexer):
     flags = re.MULTILINE | re.UNICODE
 
     reserved = ('case', 'data', 'do', 'else',
-                'if', 'in', 'infix[lr]?', 'when', 'unless'
+                'if', 'in', 'infix[lr]?', 'when', 'unless',
                 'let', 'newtype', 'of', 'then', 'type', 'where', 'free')
     ascii = ('NUL', 'SOH', '[SE]TX', 'EOT', 'ENQ', 'ACK',
              'BEL', 'BS', 'HT', 'LF', 'VT', 'FF', 'CR', 'S[OI]', 'DLE',
