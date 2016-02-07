@@ -16,5 +16,6 @@ setup(
     [pygments.lexers]
     currylexer = pygments_mastersthesis.lexers:CurryLexer
     smt2lexer  = pygments_mastersthesis.lexers:Smt2Lexer
+    picatlexer = pygments_mastersthesis.lexers:PicatLexer
     '''
 )

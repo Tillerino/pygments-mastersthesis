@@ -1,40 +1,9 @@
 # -*- coding: utf-8 -*-
 """
-    pygments.styles.tango
+    pygments.styles.mastersthesis
     ~~~~~~~~~~~~~~~~~~~~~
 
-    The Crunchy default Style inspired from the color palette from
-    the Tango Icon Theme Guidelines.
-
-    http://tango.freedesktop.org/Tango_Icon_Theme_Guidelines
-
-    Butter:     #fce94f     #edd400     #c4a000
-    Orange:     #fcaf3e     #f57900     #ce5c00
-    Chocolate:  #e9b96e     #c17d11     #8f5902
-    Chameleon:  #8ae234     #73d216     #4e9a06
-    Sky Blue:   #729fcf     #3465a4     #204a87
-    Plum:       #ad7fa8     #75507b     #5c35cc
-    Scarlet Red:#ef2929     #cc0000     #a40000
-    Aluminium:  #eeeeec     #d3d7cf     #babdb6
-                #888a85     #555753     #2e3436
-
-    Not all of the above colors are used; other colors added:
-        very light grey: #f8f8f8  (for background)
-
-    This style can be used as a template as it includes all the known
-    Token types, unlike most (if not all) of the styles included in the
-    Pygments distribution.
-
-    However, since Crunchy is intended to be used by beginners, we have strived
-    to create a style that gloss over subtle distinctions between different
-    categories.
-
-    Taking Python for example, comments (Comment.*) and docstrings (String.Doc)
-    have been chosen to have the same style.  Similarly, keywords (Keyword.*),
-    and Operator.Word (and, or, in) have been assigned the same style.
-
-    :copyright: Copyright 2006-2014 by the Pygments team, see AUTHORS.
-    :license: BSD, see LICENSE for details.
+    We started out with the tango style and adjusted it to out liking.
 """
 
 from pygments.style import Style
@@ -44,7 +13,7 @@ from pygments.token import Keyword, Name, Comment, String, Error, \
 
 class MastersthesisStyle(Style):
     """
-    Herpaderp
+    Hightlighing style for our masterstheses.
     """
 
     # work in progress...
