@@ -161,9 +161,12 @@ class Smt2Lexer(RegexLexer):
     # list of known keywords and builtins taken form vim 6.4 scheme.vim
     # syntax file.
     keywords = (
-        'declare-const', 'define-fun', 'assert', 'check-sat', 'get-model',
-        'get-value', 'echo',
+        'declare-const', 'declare-fun' 'define-fun', 'assert', 'check-sat',
+        'get-model', 'get-value', 'echo', 'exit',
         'sat', 'unsat', 'unknown', 'model'
+    )
+    sorts = (
+        'Int', 'Bool'
     )
     builtins = (
         '*', '+', '-', '/', '<', '<=', '=', '>', '>=', 'and', 'or', 'distinct',
@@ -212,6 +215,10 @@ class Smt2Lexer(RegexLexer):
             # highlight the keywords
             ('(%s)' % '|'.join(re.escape(entry) for entry in keywords),
              Keyword.Reserved),
+
+            # highlight the sorts
+            ('(%s)' % '|'.join(re.escape(entry) for entry in sorts),
+             Keyword.Type),
 
             # first variable in a quoted string like
             # '(this is syntactic sugar)
