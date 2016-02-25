@@ -161,7 +161,7 @@ class Smt2Lexer(RegexLexer):
     # list of known keywords and builtins taken form vim 6.4 scheme.vim
     # syntax file.
     keywords = (
-        'declare-const', 'declare-fun' 'define-fun', 'assert', 'check-sat',
+        'declare-const', 'declare-fun', 'define-fun', 'assert', 'check-sat',
         'get-model', 'get-value', 'echo', 'exit',
         'sat', 'unsat', 'unknown', 'model'
     )
