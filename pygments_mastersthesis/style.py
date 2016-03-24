@@ -38,7 +38,7 @@ class MastersthesisStyle(Style):
         Keyword.Constant:          "bold #204a87",   # class: 'kc'
         Keyword.Declaration:       "bold #204a87",   # class: 'kd'
         Keyword.Namespace:         "bold #204a87",   # class: 'kn'
-        Keyword.Pseudo:            "bold #204a87",   # class: 'kp'
+        Keyword.Pseudo:            "bold #990066",   # class: 'kp'
         Keyword.Reserved:          "bold #ff0011",   # class: 'kr'
         Keyword.Type:              "bold #4444ee",   # class: 'kt'
 

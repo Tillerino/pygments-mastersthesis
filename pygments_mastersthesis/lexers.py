@@ -61,6 +61,7 @@ class CurryLexer(RegexLexer):
             (r'(<-|::|->|=>|=)(?![:!#$%&*+.\\/<=>?@^|~-]+)', Operator.Word),  # specials
             (r':[:!#$%&*+.\\/<=>?@^|~-]*', Keyword.Type),  # Constructor operators
             (r'[:!#$%&*+.\\/<=>?@^|~-]+', Operator),  # Other operators
+            (r'[`].+[`]', Operator),
             #  Numbers
             (r'\d+[eE][+-]?\d+', Number.Float),
             (r'\d+\.\d+([eE][+-]?\d+)?', Number.Float),
@@ -74,7 +75,7 @@ class CurryLexer(RegexLexer):
             #  Special
             #(r'\[\]', Keyword.Type),
             (r'\(\)', Name.Builtin),
-            (r'[][(),;`{}]', Punctuation),
+            (r'[][(),;{}]', Punctuation),
         ],
         'import': [
             # Import statements
@@ -162,8 +163,8 @@ class Smt2Lexer(RegexLexer):
     # syntax file.
     keywords = (
         'declare-const', 'declare-fun', 'define-fun', 'assert', 'check-sat',
-        'get-model', 'get-value', 'echo', 'exit',
-        'sat', 'unsat', 'unknown', 'model'
+        'get-model', 'get-value', 'echo', 'exit', 'error',
+        'sat', 'unsat', 'unknown', 'model', 'set-option', 'set-logic'
     )
     sorts = (
         'Int', 'Bool'
@@ -207,7 +208,7 @@ class Smt2Lexer(RegexLexer):
             (r"#\\([()/'\"._!§$%& ?=+-]|[a-zA-Z0-9]+)", String.Char),
 
             # constants
-            (r'(#t|#f)', Name.Constant),
+            (r'(true|false)', Name.Constant),
 
             # special operators
             (r"('|#|`|,@|,|\.)", Operator),
