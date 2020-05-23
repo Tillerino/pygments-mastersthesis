@@ -159,19 +159,56 @@ class Smt2Lexer(RegexLexer):
     filenames = ['*.smt2']
     mimetypes = ['text/x-smt2']
 
-    # list of known keywords and builtins taken form vim 6.4 scheme.vim
-    # syntax file.
+    # based on SMT-LIB 2.6
+    # http://smtlib.cs.uiowa.edu/papers/smt-lib-reference-v2.6-r2017-07-18.pdf
     keywords = (
-        'declare-const', 'declare-fun', 'define-fun', 'assert', 'check-sat',
-        'get-model', 'get-value', 'echo', 'exit', 'error',
-        'sat', 'unsat', 'unknown', 'model', 'set-option', 'set-logic'
+        # commands (Figure 3.6)
+        'assert',
+        'check-sat',
+        'check-sat-assuming',
+        'declare-const',
+        'declare-datatypes',
+        'declare-datatype',
+        'declare-fun',
+        'declare-sort',
+        'define-fun',
+        'define-fun-rec',
+        'define-funs-rec',
+        'define-sort',
+        'echo',
+        'exit',
+        'get-assertions',
+        'get-assignment',
+        'get-info',
+        'get-model',
+        'get-option',
+        'get-proof',
+        'get-unsat-assumptions',
+        'get-unsat-core',
+        'get-value',
+        'pop',
+        'push',
+        'reset',
+        'reset-assertions',
+        'set-info'
+        'set-logic'
+        'set-option',
+        # responses (Figure 3.9)
+        # left out the exotic errors
+        'model',
+        'error',
+        'sat',
+        'success',
+        'unknown',
+        'unsat',
+        'unsupported'
     )
     sorts = (
         'Int', 'Bool'
     )
     builtins = (
         '*', '+', '-', '/', '<', '<=', '=', '>', '>=', 'and', 'or', 'distinct',
-        'not'
+        'not', '=>'
     )
 
     # valid names for identifiers
